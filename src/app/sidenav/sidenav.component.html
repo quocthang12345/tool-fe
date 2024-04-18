@@ -1,0 +1,35 @@
+
+<mat-drawer-container class="sidebar-menu" [hasBackdrop]="false" autosize>
+  <mat-drawer #drawer mode="push" opened="true">
+    <div class="menu">
+      <div class="header-menu">
+        <h3>Panda TV</h3>
+        <img class="medium-icon" src="assets/logo/default-logo.svg" alt="logo" />
+      </div>
+      <mat-list-item>
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <p matListItemTitle>QR Code</p>
+      </mat-list-item>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="me-0">
+    <mat-toolbar class="sidenav">
+      <div class="sidenav-left-content">
+        <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="ms-2">Panda Tool</span>
+      </div>
+
+      <div class="sidenav-right-content">
+        <button mat-icon-button aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
